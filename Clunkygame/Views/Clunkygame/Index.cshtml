@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "i@CLUNKY died";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" type="text/css" href="@Url.Content("/Content/clunky.css")" />
+    <script type="text/javascript" src="@Url.Content("/Scripts/clunky.js")"></script>
+</head>
+<body>
+    <h2>CLUNKY died</h2>
+
+    <p>
+        There weren't many gigahertz, but we loved all one-point-six of them.<br />
+        Clunky struggled hard for only a short time, but struggled so well.<br />
+        <br />
+        Phi-12 has lost a true hero.<br />
+        @Html.Raw("<3@CLUNKY")
+    </p>
+
+    <canvas id='gamecanvas' width='1280' height='640'>browser sucks, no canvas support.  maybe you should upgrade, hmm?</canvas>
+    <img id='supernoob' class='gameimg' src="@Url.Content("/Clunkygame/img/supernoob.png")">
+    <img id='superpirate' class='gameimg' src="@Url.Content("/Clunkygame/img/superpirate.png")">
+    <img id='splode' class='gameimg' src="@Url.Content("/Clunkygame/img/splode.png")">
+    <script>
+        var game = clunkyGame();
+        game.run();
+    </script>
+
+    <p>
+        @Html.Raw("<3 Andrew Temple")<br />
+        What were you expecting, <em>Skyrim</em>?
+    </p>
+</body>
+</html>
